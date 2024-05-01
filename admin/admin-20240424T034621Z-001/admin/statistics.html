@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>U.work</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+  <div class="app-container">
+    <div class="sidebar">
+       <div class="sidebar-header">
+         <div class="logo">
+        <span>U.Work</span>
+      </div>
+    </div>
+    <ul class="sidebar-list">
+      <li class="sidebar-list-item">
+        <a href="./dashboard.html">
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="sidebar-list-item">
+        <a href="./index.html">
+          <span>User Management</span>
+        </a>
+      </li>
+      <li class="sidebar-list-item ">
+        <a href="./project.html">
+      <span>Project Management</span>
+        </a>
+      </li>
+      <li class="sidebar-list-item">
+        <a href="./financial.html">
+          <span>Financial Management</span>
+        </a>
+      </li>
+      <li class="sidebar-list-item active">
+        <a href="#">
+          <span>Statistics</span>
+        </a>
+      </li>
+      <li class="sidebar-list-item">
+        <a href="./support.html">
+          <span>Support</span>
+        </a>
+      </li>
+      <li class="sidebar-list-item">
+        <a href="./security.html">
+          <span>Security</span>
+        </a>
+      </li>   
+    </ul>
+    <div class="account-info">
+      <div class="account-info-picture">
+        <img src="https://images.unsplash.com/photo-1527736947477-2790e28f3443?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE2fHx3b21hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Account">
+      </div>
+      <div class="account-info-name">Lourence Devila</div>
+      <a href="./login.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+        </a>
+      </button>
+    </div>
+  </div>
+  <div class="app-content">
+    <div class="app-content-header">
+      <h1 class="app-content-headerText">Statistics</h1>
+      <button class="mode-switch" title="Switch Theme">
+        <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+          <defs></defs>
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
+      </button>
+      <button class="app-content-headerButton">Refresh</button>
+    </div>
+    <div class="app-content-actions">
+      <input class="search-bar" placeholder="Search..." type="text">
+      </div>
+    <div class="box-container"> 
+      <div class="box box1"> 
+          <div class="text"> 
+              <h2 class="topic-heading">1550</h2> 
+              <h2 class="topic">Total Freelancers</h2> 
+          </div>
+      </div>
+      <div class="box-container"> 
+        <div class="box box2"> 
+            <div class="text"> 
+                <h2 class="topic-heading">1250</h2> 
+                <h2 class="topic">Total Client</h2> 
+            </div> 
+        </div> 
+        <div class="box-container"> 
+          <div class="box box3"> 
+              <div class="text"> 
+                  <h2 class="topic-heading">3120</h2> 
+                  <h2 class="topic">Visitors</h2> 
+              </div> 
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="charts">
+
+      <div class="charts-card">
+        <h2 class="chart-title">User Engagement Chart (Monthly)
+        </h2>
+        <div id="bar-chart"></div>
+      </div>
+
+      <div class="charts-card">
+        <h2 class="chart-title">Freelancer and Client Activity Chart (Monthly)</h2>
+        <div id="area-chart"></div>
+      </div>
+
+    </div>          
+          
+    
+   <!-- partial -->   
+    <script  src="./script.js"></script>
+    <script  src="./scripts.js"></script>
+   
+  <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+ 
+  </body> 
+ </html> 

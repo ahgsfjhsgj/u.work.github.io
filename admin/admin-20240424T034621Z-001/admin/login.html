@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link css  -->
+    <link rel="stylesheet" href="./style1.css">
+
+    <!-- link icons  -->
+    <script src="https://kit.fontawesome.com/59784df54a.js" crossorigin="anonymous"></script>
+    <title>U.Work</title>
+</head>
+
+<body>
+    <form id="loginForm" action="./dashboard.html">
+        <div class="container">
+            <h1 class="login-head">
+                Welcome Back!
+            </h1>
+            <div class="login-wrapper">
+                <div class="input-box">
+                    <div class="input-label">Username</div>
+                    <input type="email" id="username" required>
+                </div>
+    
+                <div class="input-box">
+                    <div class="input-label">
+                        <span>Password</span>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <input type="password" id="password" required>
+                </div>
+    
+                <div class="input-box">
+                    <div class="input-label">Role:<br></div>
+                    <label><input type="radio" name="role" value="admin" required> Admin</label>
+                    <label><input type="radio" name="role" value="subadmin"> Sub Admin</label>
+                </div>
+    
+                <button type="submit" class="submit-btn">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </form>
+    <script>
+        document.getElementById("loginForm").onsubmit = function() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var role = document.querySelector('input[name="role"]:checked').value;
+    
+            // Assuming redirection URLs for admin and subadmin
+            var adminRedirectURL = "./dashboard.html    ";
+            var subAdminRedirectURL = "./sub-admin/dashboard.html";
+    
+            // Perform validation and redirection
+            if (role === "admin") {
+                // Redirect to admin dashboard
+                window.location.href = adminRedirectURL;
+            } else if (role === "subadmin") {
+                // Redirect to subadmin dashboard
+                window.location.href = subAdminRedirectURL;
+            }
+    
+            // Prevent form submission
+            return false;
+        };
+    </script>
+</body>
+
+</html>
